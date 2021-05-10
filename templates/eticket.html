@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>E-Sava &mdash; E-Ticket Details</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" href="{{ url_for('static',filename='images/covid.ico') }}">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+	<!---->
+	<!--&lt;!&ndash; Animate.css &ndash;&gt;-->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/animate.css') }}">
+	<!--&lt;!&ndash; Icomoon Icon Fonts&ndash;&gt;-->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/icomoon.css') }}">
+	<!--&lt;!&ndash; Bootstrap  &ndash;&gt;-->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.css') }}">
+	<!--&lt;!&ndash; Superfish &ndash;&gt;-->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/superfish.css') }}">
+	<!--&lt;!&ndash; Magnific Popup &ndash;&gt;-->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/magnific-popup.css') }}">
+	<!--&lt;!&ndash; Date Picker &ndash;&gt;-->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap-datepicker.min.css') }}">
+	<!--&lt;!&ndash; CS Select &ndash;&gt;-->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/cs-select.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/cs-skin-border.css') }}">
+	<!---->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+
+
+	<!-- Modernizr JS -->
+	<script src="{{ url_for('static',filename='js/modernizr-2.6.2.min.js') }}"></script>
+
+	</head>
+	<body>
+		<div id="fh5co-wrapper">
+			<div id="fh5co-page">
+	
+			<header id="fh5co-header-section" class="sticky-banner">
+				<div class="container">
+					<div class="nav-header">
+						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
+						<h1 id="fh5co-logo"><a href="/" style="color:green !important;"><i class="icon-airplane" style="color:green !important;"></i>E-Sava</a></h1>
+						<!-- START #fh5co-menu-wrap -->
+						<nav id="fh5co-menu-wrap" role="navigation">
+							<ul class="sf-menu" id="fh5co-primary-menu">
+								<li><a href="/">Home</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</header>
+	
+			<!-- end:header-top -->
+		
+			<div id="fh5co-testimonial" style="background-image:url(images/cover_bg_1.jpg);">
+                <div class="container">
+                    <div class="row animate-box">
+                        <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                            <h2>Epass Details</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="box-testimony animate-box">
+                                <blockquote>
+                                    <span class="quote"><span><i class="icon-quotes-right"></i></span></span>
+										<table>
+											{% for key in details %}
+												<tr>
+													<td style="padding:8px !important;"><b>{{key}}:</b></td>
+													<td style="padding:8px !important;">&nbsp;&nbsp;{{details[key]}}</td>
+												</tr>
+											{% endfor %}
+										</table>
+										<br/>
+                                    <p><b>"This shall pass too. You are not stuck at home you are safe at home! Wear mask save lives. We are in this together.😷"</b></p>
+                                </blockquote>
+                                <p class="author">Pranay <a href="https://github.com/Pranay-001" target="_blank">GovtOfIndia</a> <span class="subtext">Director</span></p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+			<footer>
+				<div id="footer">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 col-md-offset-3 text-center">
+								<p class="fh5co-social-icons">
+									<a href="#"><i class="icon-twitter2"></i></a>
+									<a href="#"><i class="icon-facebook2"></i></a>
+									<a href="#"><i class="icon-instagram"></i></a>
+									<a href="#"><i class="icon-dribbble2"></i></a>
+									<a href="#"><i class="icon-youtube"></i></a>
+								</p>
+								<p>Copyright 2021 <a href="#">Module</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="https://github.com/Pranay-001" target="_blank">Pranay</a> / Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!-- END fh5co-page -->
+	</div>
+
+		<!-- jQuery -->
+		<script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+		<!-- jQuery Easing -->
+		<script src="{{ url_for('static',filename='js/jquery.easing.1.3.js') }}"></script>
+		<!-- Bootstrap -->
+		<script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+		<!-- Waypoints -->
+		<script src="{{ url_for('static',filename='js/jquery.waypoints.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/sticky.js') }}"></script>
+
+		<!-- Stellar -->
+		<script src="{{ url_for('static',filename='js/jquery.stellar.min.js') }}"></script>
+		<!-- Superfish -->
+		<script src="{{ url_for('static',filename='js/hoverIntent.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/superfish.js') }}"></script>
+		<!-- Magnific Popup -->
+		<script src="{{ url_for('static',filename='js/jquery.magnific-popup.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/magnific-popup-options.js') }}"></script>
+		<!-- Date Picker -->
+		<script src="{{ url_for('static',filename='js/bootstrap-datepicker.min.js') }}"></script>
+		<!-- CS Select -->
+		<script src="{{ url_for('static',filename='js/classie.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/selectFx.js') }}"></script>
+		
+		<!-- Main JS -->
+		<script src="{{ url_for('static',filename='js/main.js') }}"></script>
+	</body>
+</html>
+

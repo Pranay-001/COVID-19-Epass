@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>E-Seva &mdash; Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="icon" href="{{ url_for('static',filename='images/covid.ico') }}">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+	<!---->
+	<!--&lt;!&ndash; Animate.css &ndash;&gt;-->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/animate.css') }}">
+	<!--&lt;!&ndash; Icomoon Icon Fonts&ndash;&gt;-->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/icomoon.css') }}">
+	<!--&lt;!&ndash; Bootstrap  &ndash;&gt;-->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.css') }}">
+	<!--&lt;!&ndash; Superfish &ndash;&gt;-->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/superfish.css') }}">
+	<!--&lt;!&ndash; Magnific Popup &ndash;&gt;-->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/magnific-popup.css') }}">
+	<!--&lt;!&ndash; Date Picker &ndash;&gt;-->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap-datepicker.min.css') }}">
+	<!--&lt;!&ndash; CS Select &ndash;&gt;-->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/cs-select.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/cs-skin-border.css') }}">
+	<!---->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+
+
+	<!-- Modernizr JS -->
+	<script src="{{ url_for('static',filename='js/modernizr-2.6.2.min.js') }}"></script>
+
+	</head>
+	<body>
+		<div id="fh5co-wrapper">
+			<div id="fh5co-page">
+	
+			<header id="fh5co-header-section" class="sticky-banner">
+				<div class="container">
+					<div class="nav-header">
+						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
+						<h1 id="fh5co-logo"><a href="/"><i class="icon-airplane"></i>E-Sava</a></h1>
+						<!-- START #fh5co-menu-wrap -->
+						<nav id="fh5co-menu-wrap" role="navigation">
+							<ul class="sf-menu" id="fh5co-primary-menu">
+								<li class="active"><a href="/">Home</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</header>
+	
+			<!-- end:header-top -->
+		
+			<div class="fh5co-hero">
+				<div class="fh5co-overlay"></div>
+				<div class="fh5co-cover" data-stellar-background-ratio="0.5" style="background-image: url(images/cover_bg_1.jpg);">
+					<div class="desc">
+						<div class="container">
+							<div class="row">
+								<div class="col-sm-5 col-md-5">
+									<!-- <a href="index.html" id="main-logo">Travel</a> -->
+									<div class="tabulation animate-box">
+	
+									  <!-- Nav tabs -->
+									   <ul class="nav nav-tabs" role="tablist">
+										  <li role="presentation" class="active">
+											  <a href="#flights" aria-controls="flights" role="tab" data-toggle="tab">Details</a>
+										  </li>
+									   </ul>
+	
+									   <!-- Tab panes -->
+										<div class="tab-content">
+										 <div  role="tabpanel" class="tab-pane active" id="flights">
+											<form action="/" method="POST">
+											<div class="row">
+												<div class="col-xxs-12 col-xs-6 mt">
+													<div  class="input-field">
+														<label for="name">Name:</label>
+														<input type="text" class="form-control" id="name" name="name" placeholder="xyz" required/>
+													</div>
+												</div>
+												<div class="col-xxs-12 col-xs-6 mt">
+													<div class="input-field">
+														<label for="email">Email:</label>
+														<input type="text" class="form-control" id="email" name="email" placeholder="xyz@gamil.com" required/>
+													</div>
+												</div>
+												<div class="col-xxs-12 col-xs-6 mt alternate">
+													<div class="input-field">
+														<label for="from-place">From State:</label>
+														<section>
+															<select class="cs-select cs-skin-border" id="from-place" name="from-place" required>
+																<option value="" disabled selected>Select</option>
+																{% for state in states %}
+																	<option value='{{state}}'>{{string.capwords(state)}}</option>
+																{% endfor %}
+															</select>
+														</section>
+													</div>
+												</div>
+												<div class="col-xxs-12 col-xs-6 mt alternate">
+													<div class="input-field">
+														<label for="to-place">To State:</label>
+														<select class="cs-select cs-skin-border" id="to-place" name="to-place" required>
+															<option value="" disabled selected>Select</option>
+															{% for state in states %}
+																<option value='{{state}}'>{{string.capwords(state)}}</option>
+															{% endfor %}
+														</select>
+													</div>
+												</div>
+												<div class="col-xxs-12 col-xs-12 mt">
+													<div  class="input-field">
+														<label for="phone">Phone Number:</label>
+														<input type="text" class="form-control" id="phone" placeholder="7767221111" name="phone" required/>
+													</div>
+												</div>
+												<div class="col-xxs-12 col-xs-6 mt">
+													<div class="input-field">
+														<label for="date-start">Check In:</label>
+														<input type="text" class="form-control" id="date-start" name="date-start" placeholder="mm/dd/yyyy" required/>
+													</div>
+												</div>
+												<div class="col-xxs-12 col-xs-6 mt">
+													<div class="input-field">
+														<label for="date-end">Check Out:</label>
+														<input type="text" class="form-control" id="date-end" name="date-end" placeholder="mm/dd/yyyy" required/>
+													</div>
+												</div>
+												
+												<div class="col-xxs-12 col-xs-6 mt">
+													<div  class="input-field">
+														<label for="adults">Adults:</label>
+														<input type="text" class="form-control" id="adults" name="adults" placeholder="1" required/>
+													</div>
+												</div>
+												<div class="col-xxs-12 col-xs-6 mt">
+													<div class="input-field">
+														<label for="childrens">Childrens:</label>
+														<input type="text" class="form-control" id="Childrens" name="childrens" placeholder="1" required/>
+													</div>
+												</div> 
+												<div class="col-xxs-6 col-xs-6 mt">
+													<div  class="input-field">
+														<input type="checkbox"  id="sendMail" name="sendMail" value="true"/>
+														<label for="sendMail">Send Email</label><br>
+													</div>
+												</div>
+												<div class="col-xxs-6 col-xs-6 mt">
+													<div  class="input-field">
+														<input type="checkbox" id="sendWhatsapp" name="sendWhatsapp" value="true"/>
+														<label for="sendWhatsapp">Send WhatsApp</label><br>
+													</div>
+												</div>
+												<div class="col-xs-12">
+													<input type="submit" class="btn btn-primary btn-block" value="Get Epass">
+												</div>
+											</div>
+											</form>
+										 </div>
+										</div>
+	
+									</div>
+								</div>
+								<div class="desc2 animate-box">
+									<div class="col-sm-7 col-sm-push-1 col-md-7 col-md-push-1">
+										<p>HandCrafted by <a href="https://github.com/Pranay-001" target="_blank" class="fh5co-site-name">Pranay</a></p>
+										<h2>Exclusive Information</h2>
+										<h3>Fly to Hometown</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+	
+			</div>
+			
+	
+			
+			
+			<footer>
+				<div id="footer">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 col-md-offset-3 text-center">
+								<p class="fh5co-social-icons">
+									<a href="#"><i class="icon-twitter2"></i></a>
+									<a href="#"><i class="icon-facebook2"></i></a>
+									<a href="#"><i class="icon-instagram"></i></a>
+									<a href="#"><i class="icon-dribbble2"></i></a>
+									<a href="#"><i class="icon-youtube"></i></a>
+								</p>
+								<p>Copyright 2021 <a href="#">Module</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="https://github.com/Pranay-001" target="_blank">Pranay</a> / Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+	
+		
+	
+		</div>
+		<!-- END fh5co-page -->
+	
+		</div>
+
+		<!-- jQuery -->
+		<script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+		<!-- jQuery Easing -->
+		<script src="{{ url_for('static',filename='js/jquery.easing.1.3.js') }}"></script>
+		<!-- Bootstrap -->
+		<script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+		<!-- Waypoints -->
+		<script src="{{ url_for('static',filename='js/jquery.waypoints.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/sticky.js') }}"></script>
+
+		<!-- Stellar -->
+		<script src="{{ url_for('static',filename='js/jquery.stellar.min.js') }}"></script>
+		<!-- Superfish -->
+		<script src="{{ url_for('static',filename='js/hoverIntent.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/superfish.js') }}"></script>
+		<!-- Magnific Popup -->
+		<script src="{{ url_for('static',filename='js/jquery.magnific-popup.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/magnific-popup-options.js') }}"></script>
+		<!-- Date Picker -->
+		<script src="{{ url_for('static',filename='js/bootstrap-datepicker.min.js') }}"></script>
+		<!-- CS Select -->
+		<script src="{{ url_for('static',filename='js/classie.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/selectFx.js') }}"></script>
+		
+		<!-- Main JS -->
+		<script src="{{ url_for('static',filename='js/main.js') }}"></script>
+	</body>
+</html>
+
