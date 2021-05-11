@@ -56,6 +56,7 @@ def index():
                     "From State: {}\n".format(details["From State"])+""\
                     "To State: {}\n".format(details["To State"])+""\
                     "From Date: {}\n".format(details["From Date"])+""\
+                    "To Date: {}\n".format(details["To Date"])+""\
                     "Adults: {}\n".format(details["Adults"])+""\
                     "Childrens: {}\n".format(details["Childrens"])+""\
                     "From State Active Cases: {}\n".format(details[details["From State"]+" Active Cases"])+""\
